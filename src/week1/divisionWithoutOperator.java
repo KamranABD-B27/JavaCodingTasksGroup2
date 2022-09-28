@@ -7,6 +7,8 @@ public class divisionWithoutOperator {
 
      */
 
+    // This is real solution
+
     public static int divideWithoutOperator(int a, int b) {
         int result = 0;
 
