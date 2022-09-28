@@ -32,7 +32,7 @@ public class divisionWithoutOperator {
 
     public static void main(String[] args) {
 
-        System.out.println(divideWithoutOperator(9, 0));
+        System.out.println(divideWithoutOperator(3, 0));
 
     }
 }
