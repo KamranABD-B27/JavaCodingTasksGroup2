@@ -6,7 +6,7 @@ public class PrintConsecutiveNumbers {
         String divisibleby2 = "Codility";
         String divisibleby3 = "Test";
         String divisibleby5 = "Coders";
-        String result = "";
+        String result = " ";
 
         int n = 10;
         for (int i =1; i <=n; i++) {
