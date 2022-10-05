@@ -1,8 +1,6 @@
 package week2;
 
 public class PrintConsecutiveNumbers {
-
-
     public static void main(String[] args) {
 
         String divisibleby2 = "Codility";
@@ -10,9 +8,8 @@ public class PrintConsecutiveNumbers {
         String divisibleby5 = "Coders";
         String result = "";
 
-
         int n = 10;
-        for (int i = 1; i <=n; i++) {
+        for (int i =1; i <=n; i++) {
             if (i % 2 == 0) {
                 result += divisibleby2;
             }
