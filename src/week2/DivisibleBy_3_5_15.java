@@ -14,15 +14,17 @@ public class DivisibleBy_3_5_15 {
         for(int i = 1; i<100; i++){
             if(i % 15 ==0){
                 Divisible15.add(i);
-            }else if(i % 5 == 0){
+            }
+            if(i % 5 == 0){
                 Divisible5.add(i);
-            }else if(i % 3 == 0){
+            }
+            if(i % 3 == 0){
                 Divisible3.add(i);
             }
         }
         System.out.println("Divisible15 " + Divisible15);
-        System.out.println("Divisible5 " + Divisible5);
-        System.out.println("Divisible3 " + Divisible3);
+        System.out.println("Divisible5  " + Divisible5);
+        System.out.println("Divisible3  " + Divisible3);
     }
 
     public static void main(String[] args) {
