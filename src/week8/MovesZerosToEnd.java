@@ -7,6 +7,35 @@ input: {1,0,2,0,3,0,4,0};
 output: [1, 2, 3, 4, 0, 0, 0, 0]
  */
 
-public class MovesZerosToEnd {
+import java.util.Arrays;
 
+public class MovesZerosToEnd {
+    public static void orderedArray (int[] A){
+
+        int temp = 0;
+
+        for (int i : A) {
+            if(i != 0){
+                A[temp++] = i;
+            }
+
+        }
+
+        for (int i = temp; i < A.length; i++) {
+            A[i] =0;
+        }
+    }
+
+    public static void main(String[] args) {
+
+        int[] A = {1,0,2,0,3,0,4,0};
+
+        orderedArray(A);
+
+        System.out.println(Arrays.toString(A));
+
+    }
 }
+
+
+
