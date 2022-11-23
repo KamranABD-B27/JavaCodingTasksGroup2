@@ -8,4 +8,22 @@ that, given an integer N (1 < N < 100), returns an array containing N unique int
 
 public class N_UniqueIntegers {
 
+    public static void sumUpNumbersToZero (int N){
+
+        for (int i = 1; i <= N/2; i++) {
+            System.out.print(i + "," + -i + ",");
+        }
+
+        if(N % 2 ==1){
+            System.out.print(0);
+        }
+    }
+
+
+    public static void main(String[] args) {
+        int A = 5;
+        sumUpNumbersToZero(A);
+    }
+
+
 }
