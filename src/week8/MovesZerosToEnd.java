@@ -28,6 +28,7 @@ public class MovesZerosToEnd {
 
     public static void main(String[] args) {
 
+
         int[] A = {1,0,2,0,3,0,4,0};
 
         orderedArray(A);
@@ -35,6 +36,38 @@ public class MovesZerosToEnd {
         System.out.println(Arrays.toString(A));
 
     }
+
+    public static int[] moveZerosToTheEnd(int[] nums){
+
+        int[] result = new int[nums.length];  //
+        int count = 0;
+
+        for (int each: nums){
+            if (each != 0){
+                result[count++] = each;
+            }
+        }
+
+        return result;
+    }
+
+    public static void main(String[] args) {
+
+        int[] nums = {1,0,2,0,3,0,4,0};
+
+        int[] result = new int[nums.length];  //
+        int count = 0;
+
+        for (int each: nums){
+            if (each != 0){
+                result[count++] = each;
+            }
+        }
+        System.out.println(Arrays.toString(result));
+    }
+
+
+
 }
 
 
