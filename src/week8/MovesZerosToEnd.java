@@ -51,20 +51,7 @@ public class MovesZerosToEnd {
         return result;
     }
 }
-//    public static void main(String[] args) {
-//
-//        int[] nums = {1,0,2,0,3,0,4,0};
-//
-//        int[] result = new int[nums.length];  //
-//        int count = 0;
-//
-//        for (int each: nums){
-//            if (each != 0){
-//                result[count++] = each;
-//            }
-//        }
-//        System.out.println(Arrays.toString(result));
-//    }
+
 
 
 
