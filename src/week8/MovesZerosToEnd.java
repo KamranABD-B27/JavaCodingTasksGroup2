@@ -10,26 +10,26 @@ output: [1, 2, 3, 4, 0, 0, 0, 0]
 import java.util.Arrays;
 
 public class MovesZerosToEnd {
-    public static void orderedArray (int[] A){
+    public static void orderedArray(int[] A) {
 
         int temp = 0;
 
         for (int i : A) {
-            if(i != 0){
+            if (i != 0) {
                 A[temp++] = i;
             }
 
         }
 
         for (int i = temp; i < A.length; i++) {
-            A[i] =0;
+            A[i] = 0;
         }
     }
 
     public static void main(String[] args) {
 
 
-        int[] A = {1,0,2,0,3,0,4,0};
+        int[] A = {1, 0, 2, 0, 3, 0, 4, 0};
 
         orderedArray(A);
 
@@ -37,38 +37,35 @@ public class MovesZerosToEnd {
 
     }
 
-    public static int[] moveZerosToTheEnd(int[] nums){
+    public static int[] moveZerosToTheEnd(int[] nums) {
 
         int[] result = new int[nums.length];  //
         int count = 0;
 
-        for (int each: nums){
-            if (each != 0){
+        for (int each : nums) {
+            if (each != 0) {
                 result[count++] = each;
             }
         }
 
         return result;
     }
-
-    public static void main(String[] args) {
-
-        int[] nums = {1,0,2,0,3,0,4,0};
-
-        int[] result = new int[nums.length];  //
-        int count = 0;
-
-        for (int each: nums){
-            if (each != 0){
-                result[count++] = each;
-            }
-        }
-        System.out.println(Arrays.toString(result));
-    }
-
-
-
 }
+//    public static void main(String[] args) {
+//
+//        int[] nums = {1,0,2,0,3,0,4,0};
+//
+//        int[] result = new int[nums.length];  //
+//        int count = 0;
+//
+//        for (int each: nums){
+//            if (each != 0){
+//                result[count++] = each;
+//            }
+//        }
+//        System.out.println(Arrays.toString(result));
+//    }
+
 
 
 
