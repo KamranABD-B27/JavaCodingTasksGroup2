@@ -4,27 +4,33 @@ Map -- Sort the map by values
 Write a method that can sort the Map by values
  */
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 public class SortingMapByValues {
     public static void main(String[] args) {
-        ArrayList<Integer> list = new ArrayList<>(Arrays.asList(5,55,4,44));
-        SortingArrayListAsc(list);
-    }
-    public static void SortingArrayListAsc(List<Integer> list) {
+        Map<String, Integer> map = new LinkedHashMap<>();
+        map.put("k0", 0);
+        map.put("k5", 5);
+        map.put("k2", 2);
+        map.put("k1", 1);
+        map.put("k3", 3);
 
-        for (int i = 0; i < list.size(); i++) {
-            for (int j = 0; j < list.size(); j++) {
-                if (list.get(i) < list.get(j)) {
-                    Integer temp = list.get(i);
-                    list.set(i, list.get(j));
-                    list.set(j, temp);
-                }
-            }
+        for (String each : map.keySet()) {
+            System.out.println("key: " + each + " value: " + map.get(each));
         }
-        System.out.println(list);
+        System.out.println("2nd way of printing" + map);
+        System.out.println("sortByValue(map) = " + sortByValue(map));
     }
 
+    public static Map<String, Integer> sortByValue(Map<String, Integer> map) {
+        List<Map.Entry<String, Integer>> list = new ArrayList<>(map.entrySet());
+        list.sort(Map.Entry.comparingByValue());
+
+        map = new LinkedHashMap<>();
+
+        for (Map.Entry<String, Integer> each : list) {
+            map.put(each.getKey(), each.getValue());
+        }
+        return map;
+    }
 }

@@ -10,9 +10,10 @@ import java.util.List;
 
 public class SortingInAscending {
     public static void main(String[] args) {
-        ArrayList<Integer> list = new ArrayList<>(Arrays.asList(5,55,4,44));
+        ArrayList<Integer> list = new ArrayList<>(Arrays.asList(5, 55, 4, 44));
         SortingArrayListAsc(list);
     }
+
     public static void SortingArrayListAsc(List<Integer> list) {
 
         for (int i = 0; i < list.size(); i++) {
@@ -26,5 +27,4 @@ public class SortingInAscending {
         }
         System.out.println(list);
     }
-
 }
