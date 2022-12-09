@@ -25,6 +25,6 @@ public class FrequencyOfCharacters1 {
 
     public static void main(String[] args) {
         String str = "Good Morning";
-        FrequencyOfChar(str);
+        FrequencyOfChar(str);//
     }
 }
