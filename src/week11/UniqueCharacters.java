@@ -8,27 +8,38 @@ For example:
 {b=1,e=1,t=1}
  */
 
+import javax.xml.stream.events.Characters;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
 public class UniqueCharacters {
-    public static void UniqueChar(String str){
-        Map<Character,Integer> map = new LinkedHashMap<>();
-        for(char each: str.toCharArray()){
-            if(map.containsKey(each)){
-                map.remove(each);
 
-                }else{
-                map.put(each,1);
+    public static Map<Character, Integer> UniqueCharactersMap(String str) {
 
+        Map<Character, Integer> countingMap = new LinkedHashMap<>();
 
+        for (char eachCha : str.toCharArray()) {
+            if (countingMap.containsKey(eachCha)) {
+                countingMap.put(eachCha, countingMap.get(eachCha) + 1);
+            } else {
+                countingMap.put(eachCha, 1);
             }
         }
-        System.out.println(map);
+
+        Map<Character, Integer> uniqueCharacters = new LinkedHashMap<>();
+        countingMap.forEach((uniqueCha, counting) -> {
+            if (counting == 1) {
+                uniqueCharacters.put(uniqueCha, counting);
+            }
+        });
+
+        return uniqueCharacters;
     }
 
+    //“aabccddeffft”
+    //    {b=1,e=1,t=1}
     public static void main(String[] args) {
-        String str = "aaabddbschhhy";
-        UniqueChar(str);
+        System.out.println(UniqueCharactersMap("aabccddeffft"));
+
     }
 }
